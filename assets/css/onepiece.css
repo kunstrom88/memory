@@ -1,0 +1,46 @@
+.board {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 600px;
+    margin: 0 auto;
+    height: 600px;
+}
+
+.card {
+    width: 100%;
+    margin: 5px;
+    background-image: url("/assets/img/onepiece");
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    transition: visibility 0s, transform 0.5s ease-in-out;
+    -webkit-transition: visibility 0s, transform 0.5s ease-in-out;
+    -moz-transition: visibility 0s, transform 0.5s ease-in-out;
+    -ms-transition: visibility 0s, transform 0.5s ease-in-out;
+    -o-transition: visibility 0s, transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.card.show {
+    visibility: visible;
+    transform: perspective(600px) rotateY(180deg);
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -moz-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+}
+.card.matched {
+    background-color: green;
+    cursor: default;
+}
+
+.reset {
+    display: none;
+}
