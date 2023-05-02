@@ -1,46 +1,54 @@
 
-//AddEventListeners for each option
+// AddEventListeners for each option
 const header = document.querySelector("header");
-const buttonOne = document.querySelector('#onePiece');
-buttonOne.addEventListener("click", onePieceFunction);
+const main = document.querySelector("#main");
+const onePiece = document.querySelector('#onePiece');
+const naruto = document.querySelector('#naruto');
+const bleach = document.querySelector('#bleach');
+const demonSlayer = document.querySelector('#demonSlayer');
+const digimon = document.querySelector('#digimon');
 
-// const buttonNar = document.querySelector('#naruto');
-// buttonNar.addEventListener("click", narutoFunction);
+onePiece.addEventListener("click", onePieceFunction);
+naruto.addEventListener("click", narutoFunction);
+bleach.addEventListener("click", bleachFunction);
+demonSlayer.addEventListener("click", demonSlayerFunction);
+digimon.addEventListener("click", digimonFunction);
 
-// const buttonBle = document.querySelector('#bleach');
-// buttonBle.addEventListener("click", bleachFunction);
-
-// const buttonDig = document.querySelector('#digimon');
-// buttonOne.addEventListener("click", digimonFunction);
-
-// const buttonDem = document.querySelector('#demonSlayer');
-// buttonOne.addEventListener("click", demonSlayerFunction);
-
-
-
-
-//Functions for each option
+// Functions for each option
 function onePieceFunction() {
 document.body.removeChild(header);
-document.main.appendChild(sectionOnePiece);
+document.body.removeChild(main);
+document.body.appendChild(mainOnePiece);
 }
 
-// function narutoFunction() {
-//     main.removeChild(sectionMemory);
-//     main.appendChild(sectionNaruto);
-// }
+function narutoFunction() {
+document.body.removeChild(header);
+document.body.removeChild(main);
+document.body.appendChild(mainNaruto);
+}
 
-// function bleachFunction() {
-//     main.removeChild(sectionMemory);
-//     main.appendChild(sectionBleach);
-// }
+function bleachFunction() {
+document.body.removeChild(header);
+document.body.removeChild(main);
+document.body.appendChild(mainBleach);
+}
 
-// function demonSlayerFunction() {
-//     main.removeChild(sectionMemory);
-//     main.appendChild(sectionDemonSlayer);
-// }
+function demonSlayerFunction() {
+document.body.removeChild(header);
+document.body.removeChild(main);
+document.main.appendChild(mainDemonSlayer);
+}
 
-// function digimonFunction() {
-//     main.removeChild(sectionMemory);
-//     main.appendChild(sectionDigimon);
-// }
+function digimonFunction() {
+document.body.removeChild(header);
+document.body.removeChild(main);
+document.main.appendChild(mainDigimon);
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
