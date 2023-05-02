@@ -34,50 +34,70 @@ const imagesOnePieceFunny = [
     '/assets/img/one-piece/chopperFunny.png',
 ];
 
+const imageColorsNaruto = {
+    '/assets/img/naruto/tsunade.png': "red",
+    '/assets/img/naruto/itachi.png': "blue",
+    '/assets/img/naruto/jiraiya.png': "brown",
+    '/assets/img/naruto/kakashi.png': "gray",
+    '/assets/img/naruto/naruto.png': "orange",
+    '/assets/img/naruto/obito.png': "green",
+    '/assets/img/naruto/sakura.png': "pink",
+    '/assets/img/naruto/sasuke.png': "purple",
+};
+
 const imagesNaruto = [
-    '../img/naruto/gai.png',
-    '../img/naruto/itachi.png',
-    '../img/naruto/jiraiya.png',
-    '../img/naruto/kakashi.png',
-    '../img/naruto/naruto.png',
-    '../img/naruto/obito.png',
-    '../img/naruto/sakura.png',
-    '../img/naruto/sasuke.png',
-    '../img/naruto/tsunade.png',
+    '/assets/img/naruto/tsunade.png',
+    '/assets/img/naruto/itachi.png',
+    '/assets/img/naruto/jiraiya.png',
+    '/assets/img/naruto/kakashi.png',
+    '/assets/img/naruto/naruto.png',
+    '/assets/img/naruto/obito.png',
+    '/assets/img/naruto/sakura.png',
+    '/assets/img/naruto/sasuke.png',
 ];
 
 const imagesNarutoFunny = [
-    '../img/naruto/gaiFunny.png',
-    '../img/naruto/itachiFunny.png',
-    '../img/naruto/jiraiyaFunny.png',
-    '../img/naruto/kakashiFunny.png',
-    '../img/naruto/narutoFunny.png',
-    '../img/naruto/obitoFunny.png',
-    '../img/naruto/sakuraFunny.png',
-    '../img/naruto/sasukeFunny.png',
-    '../img/naruto/tsunadeFunny.png',
+    '/assets/img/naruto/tsunadeFunny.png',
+    '/assets/img/naruto/itachiFunny.png',
+    '/assets/img/naruto/jiraiyaFunny.png',
+    '/assets/img/naruto/kakashiFunny.png',
+    '/assets/img/naruto/narutoFunny.png',
+    '/assets/img/naruto/obitoFunny.png',
+    '/assets/img/naruto/sakuraFunny.png',
+    '/assets/img/naruto/sasukeFunny.png',
 ];
 
+const imageColorsDigimon = {
+    '/assets/img/digimon/agumon.png': "red",
+    '/assets/img/digimon/gabumon.png': "blue",
+    '/assets/img/digimon/gatomon.png': "purple",
+    '/assets/img/digimon/palmon.png': "green",
+    '/assets/img/digimon/patamon.png': "orange",
+    '/assets/img/digimon/piyomon.png': "pink",
+    '/assets/img/digimon/tentomon.png': "brown",
+    '/assets/img/digimon/gomamon.png': "gray",
+};
+
 const imagesDigimon = [
-    '../img/digimon/agumon.png',
-    '../img/digimon/gabumon.png',
-    '../img/digimon/gatomon.png',
-    '../img/digimon/palmon.png',
-    '../img/digimon/patamon.png',
-    '../img/digimon/piyomon.png',
-    '../img/digimon/tentomon.png',
-    '../img/digimon/gomamon.png',
+    '/assets/img/digimon/agumon.png',
+    '/assets/img/digimon/gabumon.png',
+    '/assets/img/digimon/gatomon.png',
+    '/assets/img/digimon/palmon.png',
+    '/assets/img/digimon/patamon.png',
+    '/assets/img/digimon/piyomon.png',
+    '/assets/img/digimon/tentomon.png',
+    '/assets/img/digimon/gomamon.png',
 ];
 
 const imagesDigimonFunny = [
-    '../img/digimon/agumonFunny.png',
-    '../img/digimon/gabumonFunny.png',
-    '../img/digimon/gatomonFunny.png',
-    '../img/digimon/palmonFunny.png',
-    '../img/digimon/patamonFunny.png',
-    '../img/digimon/piyomonFunny.png',
-    '../img/digimon/tentomonFunny.png',
-    '../img/digimon/gomamonFunny.png',
+    '/assets/img/digimon/agumonFunny.png',
+    '/assets/img/digimon/gabumonFunny.png',
+    '/assets/img/digimon/gatomonFunny.png',
+    '/assets/img/digimon/palmonFunny.png',
+    '/assets/img/digimon/patamonFunny.png',
+    '/assets/img/digimon/piyomonFunny.png',
+    '/assets/img/digimon/tentomonFunny.png',
+    '/assets/img/digimon/gomamonFunny.png',
 ];
 
 const imageColorsBleach = {
@@ -103,12 +123,12 @@ const imagesBleach = [
 ];
 
 const imagesBleachFunny = [
-    '../img/bleach/ichigoFunny.png',
-    '../img/bleach/konFunny.png',
-    '../img/bleach/mayuriFunny.png',
-    '../img/bleach/rukiaFunny.png',
-    '../img/bleach/shunsuiFunny.png',
-    '../img/bleach/toshiroFunny.png',
-    '../img/bleach/unohanaFunny.png',
-    '../img/bleach/uraharaFunny.png',
+    '/assets/img/bleach/ichigoFunny.png',
+    '/assets/img/bleach/konFunny.png',
+    '/assets/img/bleach/mayuriFunny.png',
+    '/assets/img/bleach/rukiaFunny.png',
+    '/assets/img/bleach/shunsuiFunny.png',
+    '/assets/img/bleach/toshiroFunny.png',
+    '/assets/img/bleach/unohanaFunny.png',
+    '/assets/img/bleach/uraharaFunny.png',
 ];

@@ -36,13 +36,13 @@ document.body.appendChild(mainBleach);
 function demonSlayerFunction() {
 document.body.removeChild(header);
 document.body.removeChild(main);
-document.main.appendChild(mainDemonSlayer);
+document.body.appendChild(mainDemonSlayer);
 }
 
 function digimonFunction() {
 document.body.removeChild(header);
 document.body.removeChild(main);
-document.main.appendChild(mainDigimon);
+document.body.appendChild(mainDigimon);
 }
 
 function shuffleArray(array) {
