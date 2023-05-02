@@ -13,15 +13,56 @@ const imagesOnePieceDouble = imagesOnePiece.concat(imagesOnePiece); // tenemos e
 shuffleArray(imagesOnePieceDouble); // utilizamos la función para mezclar las imágenes duplicadas
 const numCardsOne = 16; // máximo de cartas
 const fragmentOne = document.createDocumentFragment(); // creamos un contenedor temporal vacío para agregar después, dinámicamente, todas las imágenes
-
+const flippedCards = [];
 const defaultCardOne = "/assets/img/dorso.png";
 for (let i = 1; i <= numCardsOne; i++) { // con este loop  añadimos a todas las cartas (divs) las clases de card y card-n. Lo guardamos en cardOne
     const cardOne = document.createElement('div');
     cardOne.className ='card', `card-${i}`; 
 
-    cardOne.addEventListener('click', function() { // Agregamos un controlador de eventos para cambiar la imagen de fondo de la carta y el color de fondo correspondiente en el evento click
+    cardOne.addEventListener('click', function(event) { // Agregamos un controlador de eventos para cambiar la imagen de fondo de la carta y el color de fondo correspondiente en el evento click
+        
+        const card = event.target.closest(".card"); //Fijamos que el objetivo de los clicks solo sean las cartas mediante la clase card, ignorando el board
         cardOne.style.backgroundImage = `url(${imagesOnePieceDouble[i-1]})`; // cambiamos la imagen de fondo de la carta a la imagen correspondiente en el array imagesOnePieceDouble
         cardOne.style.backgroundColor = imageColorsOnePiece[imagesOnePieceDouble[i-1]]; // cambiamos el color de fondo de la carta al color correspondiente en el array imageColorsOnePiece
+               
+       
+        if(card  && flippedCards.length<2){
+            
+            flippedCards.push(card);
+
+            if(flippedCards.length === 2){
+
+                if(flippedCards[0].style.backgroundImage === flippedCards[1].style.backgroundImage){
+                   
+                    imagesOnePiece.forEach((image)=>{
+                       
+                        if(flippedCards[0].style.backgroundImage === `url("${image}")`){
+                           
+                            const position = imagesOnePiece.indexOf(image);
+                            
+                            flippedCards[0].style.backgroundImage = `url(${imagesOnePieceFunny[position]})`;
+                            flippedCards[1].style.backgroundImage = `url(${imagesOnePieceFunny[position]})`;
+                        }
+                       
+                    });
+                    flippedCards.length = 0; //reseteamos el array flippedCards para que nops deje seguir jugando
+                }else{
+
+                
+                    console.log(flippedCards[0]);
+                    console.log(flippedCards[1].style.backgroundImage);
+                    console.log(flippedCards);
+
+                 // setTimeout(()=>{
+                    flippedCards[0].style.backgroundImage = url("/assets/img/dorso.png");
+                    flippedCards[1].style.backgroundImage = url("/assets/img/one-piece/chopper.png");
+
+                    flippedCards.length = 0;
+                 // },1000);
+                };
+    
+            }
+        }   
     });
 
     fragmentOne.appendChild(cardOne); // Añadimos cada cardOne a cada contenedor de fragmentOne correspondiente
@@ -29,7 +70,22 @@ for (let i = 1; i <= numCardsOne; i++) { // con este loop  añadimos a todas las
 
 sectionBoardOnePiece.appendChild(fragmentOne); //Añadimos el conteneodor de fragmentOne como hijo de sectionBoardOnePiece, creando el tablero
 
+// sectionBoardOnePiece.addEventListener("click",flippCardOne);
+// const flippedCards = [];
 
+// function flippCardOne(event){
+//     const card = event.target.closest(".card"); //Fijamos que el objetivo de los clicks solo sean las cartas, ignorando el board
+//     if(card  && flippedCards.length<2){
+//         cardOne.style.backgroundImage = `url(${imagesOnePieceDouble[i-1]})`; // cambiamos la imagen de fondo de la carta a la imagen correspondiente en el array imagesOnePieceDouble
+//         cardOne.style.backgroundColor = imageColorsOnePiece[imagesOnePieceDouble[i-1]];
+//         // card.classList.add("flipped");
+//         flippedCards.push(card);
+//         if(flippedCards.length === 2){
+//             console.log("hay dos cartas dadas la vuelta");
+//         }
+//     }
+
+// }
 // // SCORE SECTION
 // const sectionScore = document.createElement("section");
 // sectionScore.className = "sectionScore";

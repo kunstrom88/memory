@@ -21,16 +21,17 @@ const imagesOnePiece = [
     '/assets/img/one-piece/zoro.png',
 ];
 
+
 const imagesOnePieceFunny = [
-    '../img/one-piece/chopperFunny.png',
-    '../img/one-piece/frankyFunny.png',
-    '../img/one-piece/jinbeFunny.png',
-    '../img/one-piece/luffyFunny.png',
-    '../img/one-piece/namiFunny.png',
-    '../img/one-piece/sanjiFunny.png',
-    '../img/one-piece/ussopFunny.png',
-    '../img/one-piece/zoroFunny.png',
-    '../img/one-piece/chopperFunny.png',
+    '/assets/img/one-piece/chopperFunny.png',
+    '/assets/img/one-piece/frankyFunny.png',
+    '/assets/img/one-piece/jinbeFunny.png',
+    '/assets/img/one-piece/luffyFunny.png',
+    '/assets/img/one-piece/namiFunny.png',
+    '/assets/img/one-piece/sanjiFunny.png',
+    '/assets/img/one-piece/ussopFunny.png',
+    '/assets/img/one-piece/zoroFunny.png',
+    '/assets/img/one-piece/chopperFunny.png',
 ];
 
 const imagesNaruto = [
