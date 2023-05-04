@@ -15,6 +15,7 @@ const numCardsOne = 16; // máximo de cartas
 const fragmentOne = document.createDocumentFragment(); // creamos un contenedor temporal vacío para agregar después, dinámicamente, todas las imágenes
 const flippedCards = [];
 const defaultCardOne = "/assets/img/dorso.png";
+let clickTimes = 0;
 for (let i = 1; i <= numCardsOne; i++) { // con este loop  añadimos a todas las cartas (divs) las clases de card y card-n. Lo guardamos en cardOne
     const cardOne = document.createElement('div');
     cardOne.className ='card', `card-${i}`; 
@@ -23,13 +24,16 @@ for (let i = 1; i <= numCardsOne; i++) { // con este loop  añadimos a todas las
         
         const card = event.target.closest(".card"); //Fijamos que el objetivo de los clicks solo sean las cartas mediante la clase card, ignorando el board
         
-               
+                     
        
         if(card  && flippedCards.length<2 && !card.classList.contains("flipped")){
             card.classList.add("flipped");
             cardOne.style.backgroundImage = `url(${imagesOnePieceDouble[i-1]})`; // cambiamos la imagen de fondo de la carta a la imagen correspondiente en el array imagesOnePieceDouble
             cardOne.style.backgroundColor = imageColorsOnePiece[imagesOnePieceDouble[i-1]]; // cambiamos el color de fondo de la carta al color correspondiente en el array imageColorsOnePiece
             
+            clickTimes++; //el contador del numero de clicks, solo cuenta los clicks en las cartas que queremos voltear, si dividimos estos clicks entre dos obtendremos el numero de movimientos hechos por el jugador
+            console.log(clickTimes);
+
             flippedCards.push(card);
 
             if(flippedCards.length === 2){
